@@ -10,26 +10,26 @@
   text-decoration: none;
 }
 
-.main {
+.bgcolor {
   background: #ebfbff;
   background-image: url("../images/bg-hero-mobile.svg");
   padding: 30px 30px 50px;
 }
-.main .header {
+.bgcolor .header {
   display: flex;
   justify-content: space-between;
   padding: 30px 0;
   margin-bottom: 25px;
 }
-.main .header .logo {
+.bgcolor .header .logo {
   width: 50%;
   max-width: 200px;
 }
-.main .header .logo img {
+.bgcolor .header .logo img {
   width: 100%;
   vertical-align: bottom;
 }
-.main .header .btn {
+.bgcolor .header .btn {
   margin-left: 20px;
   width: 50%;
   max-width: 200px;
@@ -38,18 +38,18 @@
   padding: 5px;
   box-shadow: 1px 1px 10px #ebe7e7;
 }
-.main .txt {
+.bgcolor .txt {
   text-align: center;
 }
-.main .txt h1 {
+.bgcolor .txt h1 {
   margin: 30px;
   font-size: 1.5rem;
 }
-.main .txt p {
+.bgcolor .txt p {
   font-weight: 600;
   font-size: 1rem;
 }
-.main .txt .btn {
+.bgcolor .txt .btn {
   background-color: #ff52bf;
   color: #fff;
   border-radius: 30px;
@@ -57,11 +57,11 @@
   margin: 30px auto 50px;
   box-shadow: 2px 2px 10px #7d9197;
 }
-.main .pic {
+.bgcolor .pic {
   margin: auto;
-  max-width: 500px;
+  max-width: 700px;
 }
-.main .pic img {
+.bgcolor .pic img {
   width: 100%;
   vertical-align: middle;
 }
@@ -80,7 +80,6 @@
   background-color: #fff;
 }
 .content .pic {
-  width: 80%;
   margin: 60px auto;
   max-width: 500px;
 }
@@ -106,14 +105,10 @@
   padding: 150px 5% 30px;
   background-color: #00252e;
   color: #fff;
-  margin-top: 120px;
+  margin-top: 70px;
 }
 .footer .ready {
   color: #000;
-  position: absolute;
-  top: -100px;
-  left: 0;
-  z-index: 1;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 0 5px #e8e8e8;
@@ -121,10 +116,14 @@
   padding-top: 30px;
   text-align: center;
   background-color: #fff;
+  position: absolute;
+  top: -10%;
+  left: 0;
+  z-index: 1;
 }
 .footer .ready h3 {
   font-size: 1.5rem;
-  padding: 0;
+  padding: 0 10px;
   margin-bottom: 20px;
 }
 .footer .ready .btn {
@@ -138,26 +137,26 @@
 .footer .logo {
   margin-bottom: 30px;
 }
-.footer .contact {
-  margin-bottom: 30px;
+.footer .message .contact {
+  margin-bottom: 20px;
 }
-.footer .contact div {
+.footer .message .contact div {
   display: flex;
   flex-direction: row;
   margin: 10px auto;
 }
-.footer .contact div .pic {
+.footer .message .contact div .pic {
   width: 10%;
 }
-.footer .contact div .pic img {
+.footer .message .contact div .pic img {
   vertical-align: top;
   width: 18px;
   height: -webkit-fit-content;
   height: fit-content;
 }
-.footer .contact div p {
+.footer .message .contact div p {
   width: 90%;
-  margin: 0;
+  margin: 0 10px;
 }
 .footer .other {
   margin: 20px 0;
@@ -200,4 +199,121 @@
 }
 .footer footer .attribution a {
   color: #a6a6a6;
+}
+
+@media only screen and (min-width: 500px) {
+  .first,
+.second,
+.third {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0 20px;
+    justify-content: center;
+  }
+  .first .txt,
+.second .txt,
+.third .txt {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+  .first .txt h3,
+.second .txt h3,
+.third .txt h3 {
+    align-self: flex-start;
+    font-size: 1.75rem;
+  }
+  .first .pic,
+.second .pic,
+.third .pic {
+    width: 40%;
+    margin: 20px;
+  }
+
+  .second {
+    flex-direction: row;
+  }
+
+  .footer .ready {
+    width: 500px;
+    margin: 5%;
+    position: absolute;
+    top: -18%;
+    left: 50%;
+    z-index: 1;
+    margin-left: -250px;
+    margin-right: -250px;
+  }
+  .footer .ready h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (min-width: 830px) {
+  .main {
+    max-width: 1400px;
+    margin: auto;
+  }
+  .main .txt h1 {
+    margin: 30px;
+    font-size: 2rem;
+  }
+  .main .txt p {
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+  .main .pic {
+    margin: 0;
+  }
+
+  .footer .ready {
+    top: -30%;
+  }
+  .footer .message {
+    display: flex;
+  }
+  .footer .message .contact {
+    flex: 40%;
+    padding: 0;
+    margin: 0 0 50px;
+  }
+  .footer .message .contact div {
+    margin: 0;
+    padding: 0;
+  }
+  .footer .message .contact div .pic {
+    margin: 0;
+    padding: 0;
+  }
+  .footer .message .contact div p {
+    margin: 0;
+    padding: 0 0 10px;
+    text-align: justify;
+  }
+  .footer .message .icon,
+.footer .message .other1,
+.footer .message .other2 {
+    flex: 20%;
+    padding: 0;
+    margin: 0;
+  }
+  .footer .message .other {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer .message .other a {
+    margin: 0;
+    padding: 0 0 10px;
+  }
+  .footer .message .icon {
+    display: block;
+  }
+  .footer .message .icon .fab {
+    margin: 0 3px;
+  }
 }
